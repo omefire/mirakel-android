@@ -24,6 +24,8 @@ $ chmod a+x ~/bin/repo
 3. Initialize a Repo client
 ```sh
 $ mkdir mirakel-android
+$ repo init -u https://gerrit.azapps.de/r/mirakel-android
+or with account(replace az by account name)
 $ repo init -u ssh://az@gerrit.azapps.de:29418/mirakel-android
 ```
 4. Downloading the source
