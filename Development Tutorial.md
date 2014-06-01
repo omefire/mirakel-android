@@ -146,6 +146,10 @@ Everything which has something to do with the settings part of mirakel.
 Some tests are generated automatically. Just run `build/create_tests.py` in the main directory.
 
 In Eclipse you can run the tests by right click → run → Android tests.
+You could also use gradle to start all tests: 
+```sh
+$ gradle connectedAndroidTest
+```
 
 The Package structure represents the package structure in the other libraries.
 
