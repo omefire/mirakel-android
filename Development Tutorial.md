@@ -1,5 +1,3 @@
-# Development Tutorial
-
 (Partially copied from [http://source.android.com/source/downloading.html](http://source.android.com/source/downloading.html))
 
 You want to help us developing Mirakel? Great! We changed our development process a bit to improve our code quality and to support the old android versions furthermore.
