@@ -110,8 +110,7 @@ This stuff you mostly do not need to touch. It is working fine.
 * */changelog/* Show the changelog on startup after an update.
 * [*/colorpicker/*](https://github.com/LarsWerkman/HoloColorPicker)
 * */colorpickerpreference/* The colorpicker for using in the preferences.
-  It is extracted from the AOSP Calendar
-* */date-time-picker/* A modified picker for pick a date and a time simultaneously
+* [*/date-time-picker/*](https://github.com/flavienlaurent/datetimepicker) A modified picker for pick a date and a time simultaneously
 * [*/donationslib/*](https://github.com/dschuermann/android-donations-lib) Donation library supporting Paypal, Flattr and Google Play
 * [*/drag-sort-listview/*](https://github.com/bauerca/drag-sort-listview) The Library providing nice drag and drop functionality for listviews
 * [*/ilovefs-android/*](https://github.com/azapps/ilovefs-android) An information dialog displayed on the I love FS day
@@ -141,6 +140,7 @@ This are the views we are using in the TaskFragment.
 Everything which has something to do with the taskwarrior sync.
 
 #### Settings
+Everything which has something to do with the settings part of mirakel.
 
 #### Tests
 Some tests are generated automatically. Just run `build/create_tests.py` in the main directory.
