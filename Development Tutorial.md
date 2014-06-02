@@ -22,12 +22,12 @@ $ curl http://commondatastorage.googleapis.com/git-repo-downloads/repo > ~/bin/r
 $ chmod a+x ~/bin/repo
 ```
 3. Initialize a Repo client
+Please create an account on our [gerrit instance](https://gerrit.azapps.de/r/), add your public key and init repo with the following command:
 ```sh
 $ mkdir mirakel-android
-$ repo init -u https://gerrit.azapps.de/r/mirakel-android
-or with account(replace az by account name)
-$ repo init -u ssh://az@gerrit.azapps.de:29418/mirakel-android
+$ repo init -u ssh://[username]@gerrit.azapps.de:29418/mirakel-android
 ```
+Replace [username] by your user name.
 4. Downloading the source
 ```sh
 $ cd mirakel-android
