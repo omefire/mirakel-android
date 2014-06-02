@@ -25,12 +25,12 @@ $ chmod a+x ~/bin/repo
 Please create an account on our [gerrit instance](https://gerrit.azapps.de/r/), add your public key and init repo with the following command:
 ```sh
 $ mkdir mirakel-android
+$ cd mirakel-android
 $ repo init -u ssh://[username]@gerrit.azapps.de:29418/mirakel-android
 ```
 Replace [username] by your user name.
 4. Downloading the source
 ```sh
-$ cd mirakel-android
 $ repo sync
 ```
 
