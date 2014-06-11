@@ -22,7 +22,14 @@ $ curl http://commondatastorage.googleapis.com/git-repo-downloads/repo > ~/bin/r
 $ chmod a+x ~/bin/repo
 ```
 3. Initialize a Repo client
-Please create an account on our [gerrit instance](https://gerrit.azapps.de/r/), add your public key and init repo with the following command:
+Please add the following lines to your `~/.ssh/config`:
+```sh
+Host gerrit.azapps.de
+	IdentityFile ~/.ssh/[YOUR KEY-FILE]
+	User [YOUR GERRIT-USERNAME]
+```
+
+Please create an account on our [gerrit instance](https://gerrit.azapps.de/r/), add your [public key](https://gerrit.azapps.de/r/#/settings/ssh-keys) and init repo with the following command:
 ```sh
 $ mkdir mirakel-android
 $ cd mirakel-android
