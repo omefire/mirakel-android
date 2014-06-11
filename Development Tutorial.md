@@ -52,7 +52,7 @@ We use eclipse to develop Mirakel. You can do it too (or tell us what is better 
 
 ## Using Gradle
 
-The simplest way to build Mirakel using Gradle is:
+The simplest way to build Mirakel using Gradle(Version 1.12 is recommend) is:
 ```sh
 $ gradle build
 ```
