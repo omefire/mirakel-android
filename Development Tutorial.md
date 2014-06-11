@@ -44,6 +44,7 @@ $ repo sync
 That's it. You should now have a fully working Mirakel-environment and you can start developing!
 
 ## Using Eclipse
+Get the Android SDK and Eclipse from [here](http://developer.android.com/sdk/index.html)
 
 We use eclipse to develop Mirakel. You can do it too (or tell us what is better and why). To import the repos do the following:
 
