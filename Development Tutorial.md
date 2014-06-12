@@ -95,6 +95,7 @@ Add your public key on the gerrit page and then you can just execute
 repo sync # Update your repo
 repo upload # Upload your changes
 ```
+If repo asks you to install a git-hook, do this and ammend all commits.
 
 That's all! More information you can find [here](http://source.android.com/source/developing.html) or just ask us!
 
