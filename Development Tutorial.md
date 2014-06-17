@@ -54,7 +54,7 @@ Select the root directory (mirakel-android) and all the projects from it -> clic
 
 Select project `SplashScreenActivity` -> `Alt+Shift+R` to rename it into `Mirakel` (mandatory to execute app ) 
 
-`Alt+Enter` -> `Java Build Path` -> Projects` to set dependencies for 2 projects:
+`Alt+Enter` -> `Java Build Path` -> `Projects` to set dependencies for 2 projects:
 * project `Mirakel`: add all the projects except `tests` 
 * project `tests`: add all the projects 
 
