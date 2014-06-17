@@ -46,9 +46,22 @@ That's it. You should now have a fully working Mirakel-environment and you can s
 ## Using Eclipse
 Get the Android SDK and Eclipse from [here](http://developer.android.com/sdk/index.html)
 
-We use eclipse to develop Mirakel. You can do it too (or tell us what is better and why). To import the repos do the following:
+We use Eclipse to develop Mirakel. You can do it too (or tell us what is better and why). 
 
-`Ctrl+N` -> `Android Project from Existing Code` -> select the root directory (mirakel-android). Then you should see a bunch of projects – please rename the project `SplashScreenActivity` to `Mirakel` and just click on `Finish`. To compile Mirakel select the project `Mirakel` and compile it.
+`Ctrl+N` -> `Android Project from Existing Code` to import properly the repos in the Eclipse workspace
+
+Select the root directory (mirakel-android) and all the projects from it -> click on `Finish`
+
+Select project `SplashScreenActivity` -> `Alt+Shift+R` to rename it into `Mirakel` (mandatory to execute app ) 
+
+`Alt+Enter` -> `Java Build Path` -> Projects` to set dependencies for 2 projects:
+* project `Mirakel`: add all the projects except `tests` 
+* project `tests`: add all the projects 
+
+Before building, some errors can be raised on projects due to the mismatch in JRE version (JRE 1.7 is currently mandatory). Can be solved in pop-up from one of errors in source code by authorizing JRE compliance for workspace.
+
+Build the project `Mirakel` from a right click -> `Build Project`
+
 
 ## Using Gradle
 
