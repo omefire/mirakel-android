@@ -1,0 +1,114 @@
+@startuml
+class "lists" {
+int _id
+text name
+int sort_by
+int created_at
+int updated_at
+int color
+int account_id
+}
+class "tasks" {
+int _id
+int list_id
+text name
+text content
+bool done
+int priority
+int due
+int created_at
+int updated_at
+int sync_state
+int reminder
+text uuid
+text additional_entries
+int recurring
+int recurring_reminder
+int progress
+}
+tasks "1" --* "*" lists
+tasks "*" --* "*" tasks : subtasks
+class "tag" {
+int _id
+text name
+bool dark_text
+int color
+}
+tag "*" --* "*" tasks
+
+class "special_lists" {
+bool active
+text whereQuery
+int sort_by
+int sync_state
+int def_list
+int def_date
+int color
+}
+special_lists --|> lists
+class "semantic_conditions" {
+int _id
+text condition
+int due
+int priority
+int list
+int default_list_id
+int weekday
+}
+class "files" {
+int _id
+int task_id
+text name
+text path
+}
+files "*" --* "1" tasks
+
+class "subtasks" {
+int _id
+int parent_id
+int child_id
+}
+subtasks "*" --* "*" tasks
+
+class recurring {
+int _id
+int years
+int months
+int days
+int hours
+int minutes
+bool for_due
+text label
+int start_date
+int end_date
+int temporary
+bool is_exact
+bool monday
+bool tuesday
+bool wednesday
+bool thursday
+bool friday
+bool saturday
+bool sunnday
+int derived_from
+}
+recurring "*" --* "1" recurring
+recurring "*" --* "1" tasks
+class account {
+int _id
+text name
+text content
+bool enabled
+int type
+text sync_key
+}
+lists "*" --* "1" account
+
+class caldav_extra {
+int _id
+text ETAG
+text SYNC_ID
+text REMOTE_NAME
+}
+
+@enduml

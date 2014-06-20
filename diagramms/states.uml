@@ -1,0 +1,26 @@
+@startuml
+package "Mirakel" {
+  (undone)
+  (removed)
+  (done)
+  (CALCULATED)
+  (is_shown)
+}
+package "Taswarrior" {
+  (pending) <-> (undone)
+  (deleted) <-> (removed)
+  (tw_completed) <-> (done)
+  (waiting) <- (CALCULATED)
+  (waiting) -> (undone)
+  (recurring) <-> (is_shown)
+}
+package "CalDAV" {
+  (needs_action) <-> (undone)
+  (in_process) -> (undone)
+  (in_process) <- (CALCULATED)
+  (completed) <-> (done)
+  (cancelled) <-> (removed)
+}
+
+
+@enduml

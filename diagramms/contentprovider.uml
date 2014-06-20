@@ -1,0 +1,110 @@
+@startuml
+
+interface CommonSyncColumns {
+String _SYNC_ID
+String SYNC_VERSION
+Integer _DIRTY
+String SYNC1
+String SYNC2
+String SYNC3
+String SYNC4
+String SYNC5
+String SYNC6
+String SYNC7
+String SYNC8
+}
+interface TaskListSyncColumns {
+String ACCOUNT_NAME
+String ACCOUNT_TYPE
+}
+interface TaskSyncColumns {
+String _UID
+Integer _DELETED
+}
+interface TaskListColumns {
+LONG _ID
+String LIST_NAME
+Integer LIST_COLOR
+String ACCESS_LEVEL
+String VISIBLE
+String SYNC_ENABLED
+String OWNER
+}
+class TaskList
+TaskListColumns <|--- TaskList
+TaskListSyncColumns <|--- TaskList
+CommonSyncColumns <|--- TaskList
+
+
+
+interface TaskColumns {
+Integer _ID
+Integer LIST_ID
+String TITLE
+String LOCATION
+String GEO
+String DESCRIPTION
+String URL
+String ORGANIZER
+Integer PRIORITY
+Integer CLASSIFICATION
+Long COMPLETED
+Integer COMPLETED_IS_ALLDAY
+Integer PERCENT_COMPLETE
+Integer STATUS
+Integer IS_NEW
+Integer IS_CLOSED
+String TASK_COLOR
+Long DTSTART
+Boolean IS_ALLDAY
+Long CREATED
+Long LAST_MODIFIED
+String TZ
+Long DUE
+String DURATION
+String RDATE
+String EXDATE
+String RRULE
+Long ORIGINAL_INSTANCE_SYNC_ID
+Long ORIGINAL_INSTANCE_ID
+Long ORIGINAL_INSTANCE_TIME
+Integer ORIGINAL_INSTANCE_ALLDAY
+Long PARENT_ID
+String SORTING
+Integer HAS_ALARMS
+}
+class Tasks {
+String ACCOUNT_NAME
+String ACCOUNT_TYPE
+String LIST_NAME
+Integer LIST_COLOR
+String LIST_OWNER
+Integer LIST_ACCESS_LEVEL
+Integer VISIBLE
+}
+TaskColumns <|--- Tasks
+CommonSyncColumns <|--- Tasks
+TaskSyncColumns <|--- Tasks
+
+
+interface InstanceColumns {
+Long TASK_ID
+Long INSTANCE_START
+Long INSTANCE_DUE
+Long INSTANCE_START_SORTING
+Long INSTANCE_DUE_SORTING
+Long INSTANCE_DURATION
+}
+class Instances {
+String ACCOUNT_NAME
+String ACCOUNT_TYPE
+String LIST_NAME
+Integer LIST_COLOR
+String LIST_OWNER
+Integer LIST_ACCESS_LEVEL
+Integer VISIBLE
+}
+TaskColumns <|--- Instances
+InstanceColumns <|--- Instances
+
+@enduml
