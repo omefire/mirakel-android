@@ -22,29 +22,50 @@ $ curl http://commondatastorage.googleapis.com/git-repo-downloads/repo > ~/bin/r
 $ chmod a+x ~/bin/repo
 ```
 3. Initialize a Repo client
+Please add the following lines to your `~/.ssh/config`:
+```sh
+Host gerrit.azapps.de
+	IdentityFile ~/.ssh/[YOUR KEY-FILE]
+	User [YOUR GERRIT-USERNAME]
+```
+
+Please create an account on our [gerrit instance](https://gerrit.azapps.de/r/), add your [public key](https://gerrit.azapps.de/r/#/settings/ssh-keys) and init repo with the following command:
 ```sh
 $ mkdir mirakel-android
-$ repo init -u https://gerrit.azapps.de/r/mirakel-android
-or with account(replace az by account name)
-$ repo init -u ssh://az@gerrit.azapps.de:29418/mirakel-android
+$ cd mirakel-android
+$ repo init -u ssh://[username]@gerrit.azapps.de:29418/mirakel-android
 ```
+Replace [username] by your user name.
 4. Downloading the source
 ```sh
-$ cd mirakel-android
 $ repo sync
 ```
 
 That's it. You should now have a fully working Mirakel-environment and you can start developing!
 
 ## Using Eclipse
+Get the Android SDK and Eclipse from [here](http://developer.android.com/sdk/index.html)
 
-We use eclipse to develop Mirakel. You can do it too (or tell us what is better and why). To import the repos do the following:
+We use Eclipse to develop Mirakel. You can do it too (or tell us what is better and why). 
 
-`Ctrl+N` -> `Android Project from Existing Code` -> select the root directory (mirakel-android). Then you should see a bunch of projects – please rename the project `SplashScreenActivity` to `Mirakel` and just click on `Finish`. To compile Mirakel select the project `Mirakel` and compile it.
+`Ctrl+N` -> `Android Project from Existing Code` to import properly the repos in the Eclipse workspace
+
+Select the root directory (mirakel-android) and all the projects from it -> click on `Finish`
+
+Select project `SplashScreenActivity` -> `Alt+Shift+R` to rename it into `Mirakel` (mandatory to execute app ) 
+
+`Alt+Enter` -> `Java Build Path` -> `Projects` to set dependencies for 2 projects:
+* project `Mirakel`: add all the projects except `tests` 
+* project `tests`: add all the projects 
+
+Before building, some errors can be raised on projects due to the mismatch in JRE version (JRE 1.7 is currently mandatory). Can be solved in pop-up from one of errors in source code by authorizing JRE compliance for workspace.
+
+Build the project `Mirakel` from a right click -> `Build Project`
+
 
 ## Using Gradle
 
-The simplest way to build Mirakel using Gradle is:
+The simplest way to build Mirakel using Gradle(Version 1.12 is recommend) is:
 ```sh
 $ gradle build
 ```
@@ -87,6 +108,7 @@ Add your public key on the gerrit page and then you can just execute
 repo sync # Update your repo
 repo upload # Upload your changes
 ```
+If repo asks you to install a git-hook, do this and ammend all commits.
 
 That's all! More information you can find [here](http://source.android.com/source/developing.html) or just ask us!
 
