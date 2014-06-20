@@ -1,4 +1,5 @@
 @startuml
+package "Version 40" {
 class "lists" {
 int _id
 text name
@@ -109,6 +110,17 @@ int _id
 text ETAG
 text SYNC_ID
 text REMOTE_NAME
+}
+caldav_extra "0…1" --* "1" tasks
+
+class recurring_tw_mask {
+int _id
+int parent
+int child
+int offset
+int offsetCount
+}
+recurring_tw_mask "0..1" --* "1" tasks
 }
 
 @enduml
