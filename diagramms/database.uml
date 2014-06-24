@@ -1,5 +1,5 @@
 @startuml
-package "Version 40" {
+package "Version 41" {
 class "lists" {
 int _id
 text name
@@ -29,6 +29,26 @@ int progress
 }
 tasks "1" --* "*" lists
 tasks "*" --* "*" tasks : subtasks
+
+class caldav_extra_lists {
+int list_id
+text _sync_id
+text sync_version
+text sync1
+text sync2
+text sync3
+text sync4
+text sync5
+text sync6
+text sync7
+text sync8
+int list_access_level
+bool visible
+bool sync_enabled
+text owner
+}
+caldav_extra_lists "0…1" --* "1" lists
+
 class "tag" {
 int _id
 text name
@@ -107,9 +127,25 @@ lists "*" --* "1" account
 
 class caldav_extra {
 int _id
-text ETAG
-text SYNC_ID
-text REMOTE_NAME
+text _sync_id
+text sync_version
+text sync1
+text sync2
+text sync3
+text sync4
+text sync5
+text sync6
+text sync7
+text sync8
+
+text url
+text organizer
+int task_color
+int classification
+text tz
+text duration
+text sorting
+int has_alarms
 }
 caldav_extra "0…1" --* "1" tasks
 

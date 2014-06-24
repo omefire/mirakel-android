@@ -1,34 +1,34 @@
 @startuml
 
 interface CommonSyncColumns {
-String _SYNC_ID
-String SYNC_VERSION
-Integer _DIRTY
-String SYNC1
-String SYNC2
-String SYNC3
-String SYNC4
-String SYNC5
-String SYNC6
-String SYNC7
-String SYNC8
+string _sync_id
+string sync_version
+integer _dirty
+string sync1
+string sync2
+string sync3
+string sync4
+string sync5
+string sync6
+string sync7
+string sync8
 }
 interface TaskListSyncColumns {
-String ACCOUNT_NAME
-String ACCOUNT_TYPE
+string account_name
+string account_type
 }
 interface TaskSyncColumns {
-String _UID
-Integer _DELETED
+string _uid
+integer _deleted
 }
 interface TaskListColumns {
-LONG _ID
-String LIST_NAME
-Integer LIST_COLOR
-String ACCESS_LEVEL
-String VISIBLE
-String SYNC_ENABLED
-String OWNER
+long _id
+string list_name
+integer list_color
+string access_level
+string visible
+string sync_enabled
+string owner
 }
 class TaskList
 TaskListColumns <|--- TaskList
@@ -38,49 +38,49 @@ CommonSyncColumns <|--- TaskList
 
 
 interface TaskColumns {
-Integer _ID
-Integer LIST_ID
-String TITLE
-String LOCATION
-String GEO
-String DESCRIPTION
-String URL
-String ORGANIZER
-Integer PRIORITY
-Integer CLASSIFICATION
-Long COMPLETED
-Integer COMPLETED_IS_ALLDAY
-Integer PERCENT_COMPLETE
-Integer STATUS
-Integer IS_NEW
-Integer IS_CLOSED
-String TASK_COLOR
-Long DTSTART
-Boolean IS_ALLDAY
-Long CREATED
-Long LAST_MODIFIED
-String TZ
-Long DUE
-String DURATION
-String RDATE
-String EXDATE
-String RRULE
-Long ORIGINAL_INSTANCE_SYNC_ID
-Long ORIGINAL_INSTANCE_ID
-Long ORIGINAL_INSTANCE_TIME
-Integer ORIGINAL_INSTANCE_ALLDAY
-Long PARENT_ID
-String SORTING
-Integer HAS_ALARMS
+integer _id
+integer list_id
+string title
+string location
+string geo
+string description
+string url
+string organizer
+integer priority
+integer classification
+long completed
+integer completed_is_allday
+integer percent_complete
+integer status
+integer is_new
+integer is_closed
+string task_color
+long dtstart
+boolean is_allday
+long created
+long last_modified
+string tz
+long due
+string duration
+string rdate
+string exdate
+string rrule
+long original_instance_sync_id
+long original_instance_id
+long original_instance_time
+integer original_instance_allday
+long parent_id
+string sorting
+integer has_alarms
 }
 class Tasks {
-String ACCOUNT_NAME
-String ACCOUNT_TYPE
-String LIST_NAME
-Integer LIST_COLOR
-String LIST_OWNER
-Integer LIST_ACCESS_LEVEL
-Integer VISIBLE
+string account_name
+string account_type
+string list_name
+integer list_color
+string list_owner
+integer list_access_level
+integer visible
 }
 TaskColumns <|--- Tasks
 CommonSyncColumns <|--- Tasks
@@ -88,21 +88,21 @@ TaskSyncColumns <|--- Tasks
 
 
 interface InstanceColumns {
-Long TASK_ID
-Long INSTANCE_START
-Long INSTANCE_DUE
-Long INSTANCE_START_SORTING
-Long INSTANCE_DUE_SORTING
-Long INSTANCE_DURATION
+long task_id
+long instance_start
+long instance_due
+long instance_start_sorting
+long instance_due_sorting
+long instance_duration
 }
 class Instances {
-String ACCOUNT_NAME
-String ACCOUNT_TYPE
-String LIST_NAME
-Integer LIST_COLOR
-String LIST_OWNER
-Integer LIST_ACCESS_LEVEL
-Integer VISIBLE
+string account_name
+string account_type
+string list_name
+integer list_color
+string list_owner
+integer list_access_level
+integer visible
 }
 TaskColumns <|--- Instances
 InstanceColumns <|--- Instances
