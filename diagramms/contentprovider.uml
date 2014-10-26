@@ -107,4 +107,62 @@ integer visible
 TaskColumns <|--- Instances
 InstanceColumns <|--- Instances
 
+class PropertySyncColumns {
+string prop_sync1
+string prop_sync2
+string prop_sync3
+string prop_sync4
+string prop_sync5
+string prop_sync6
+string prop_sync7
+string prop_sync8
+}
+class PropertyColumns {
+int property_id
+int task_id
+string mimetype
+string prop_version
+string data0
+string data1
+string data2
+string data3
+string data4
+string data5
+string data6
+string data7
+string data8
+string data9
+string data10
+string data11
+string data12
+string data13
+string data14
+string data15
+}
+
+class Properties {
+}
+PropertyColumns <|-- Properties
+PropertySyncColumns <|-- Properties
+
+class CategoriesColumns {
+int _id
+string account_name
+string account_type
+string name
+int color
+}
+
+class Categories {
+}
+CategoriesColumns <|-- Categories
+
+class AlarmColumns {
+int alarm_id
+string last_trigger
+string next_trigger
+}
+AlarmColumns <|-- Alarm 
+
+
 @enduml
