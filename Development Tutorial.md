@@ -57,7 +57,7 @@ Do not use Eclipse. We do not support Eclipse anymore
 
 ## Using Gradle
 
-The simplest way to build Mirakel using Gradle(Version 1.12 is recommend) is:
+The simplest way to build Mirakel using Gradle(Version 2.1 is recommend) is:
 ```sh
 $ gradle build
 ```
@@ -120,7 +120,6 @@ We have structured our code in the following projects:
 This stuff you mostly do not need to touch. It is working fine.
 
 * [*/acra/*](http://acra.ch/) Acra is a tool to report crashes
-* */appcompat/* The appcompat library to support Android < 4
 * */changelog/* Show the changelog on startup after an update.
 * [*/colorpicker/*](https://github.com/LarsWerkman/HoloColorPicker)
 * */colorpickerpreference/* The colorpicker for using in the preferences.
@@ -138,10 +137,14 @@ This is the main library including all others. Here we defined the main activiti
 * * *task_fragment* The fragment for the list of the tasks
 * * *tasks_fragment* The fragment with the task details
 * *static_activities* 
-* * *SplashScreenActivity* The activity which is shown at startup (The Logo on black backgrount)
+* * *SplashScreenActivity* The activity which is shown at startup (The Logo on black background)
 
 #### Model
 Here you can find our models. They are responsible for communicating with the database and represents our data structures.
+
+### New_ui
+
+Here is the experiential new ui of mirakel
 
 #### Custom_views
 This are the views we are using in the TaskFragment.
