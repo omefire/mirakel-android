@@ -195,7 +195,7 @@ Tools we use for developing:
 
 Suggestions for more/better tools are welcome!
 
-* [*Eclipse+ADT*](http://developer.android.com/sdk/index.html) We use Eclipse because we don't like Android Studio.
+* [*Androidstudio*](https://developer.android.com/sdk/installing/studio.html) We use Android Studio, because it will be the future of android developing.
 * [*Gradle*](http://www.gradle.org/) For building Mirakel
 * [*Repo*](https://code.google.com/p/git-repo/) For managing our git repositories
 * [*Gerrit*](https://code.google.com/p/gerrit/) For Code review. Our gerrit instance you can find here: [https://gerrit.azapps.de/r/](https://gerrit.azapps.de/r/)
