@@ -110,7 +110,7 @@ That's all! More information you can find [here](http://source.android.com/sourc
 
 ### Code structure
 
-This part could be not up to date. Last change: 2014-06-01
+This part could be not up to date. Last change: 2015-06-14
 
 We have structured our code in the following projects:
 
@@ -119,39 +119,21 @@ We have structured our code in the following projects:
 
 This stuff you mostly do not need to touch. It is working fine.
 
-* [*/acra/*](http://acra.ch/) Acra is a tool to report crashes
 * */changelog/* Show the changelog on startup after an update.
 * [*/colorpicker/*](https://github.com/LarsWerkman/HoloColorPicker)
 * */colorpickerpreference/* The colorpicker for using in the preferences.
 * [*/date-time-picker/*](https://github.com/flavienlaurent/datetimepicker) A modified picker for pick a date and a time simultaneously
 * [*/donationslib/*](https://github.com/dschuermann/android-donations-lib) Donation library supporting Paypal, Flattr and Google Play
-* [*/drag-sort-listview/*](https://github.com/bauerca/drag-sort-listview) The Library providing nice drag and drop functionality for listviews
 * [*/ilovefs-android/*](https://github.com/azapps/ilovefs-android) An information dialog displayed on the I love FS day
 * [*/progresswheel/*](https://github.com/Todd-Davies/ProgressWheel) The progresswheel shown in the Tasksfragment
 
-#### Mirakel aka main
-This is the main library including all others. Here we defined the main activities and fragments of the app.
-
-* *main_activity* This is the main activity in Mirakel. You see it when you start the App
-* * *list_fragment* All the stuff for the Navigation Drawer
-* * *task_fragment* The fragment for the list of the tasks
-* * *tasks_fragment* The fragment with the task details
-* *static_activities* 
-* * *SplashScreenActivity* The activity which is shown at startup (The Logo on black background)
 
 #### Model
 Here you can find our models. They are responsible for communicating with the database and represents our data structures.
 
 ### New_ui
 
-Here is the experiential new ui of mirakel
-
-#### Custom_views
-This are the views we are using in the TaskFragment.
-
-* *adapter* This are the [Adapters](http://developer.android.com/reference/android/widget/Adapter.html) we are using for the custom views
-* *custom_views* This are Classes represententing special views. We use them in the TaskFragment
-* *helper* Some helper classes for the views
+The main part of Mirakel containing the new UI.
 
 #### tw_sync
 Everything which has something to do with the taskwarrior sync.
@@ -159,18 +141,7 @@ Everything which has something to do with the taskwarrior sync.
 #### Settings
 Everything which has something to do with the settings part of mirakel.
 
-#### Tests
-Some tests are generated automatically. Just run `build/create_tests.py` in the main directory.
 
-In Eclipse you can run the tests by right click → run → Android tests.
-You could also use gradle to start all tests: 
-```sh
-$ gradle connectedAndroidTest
-```
-
-The Package structure represents the package structure in the other libraries.
-
-More Informations for the tests you can find [here](https://github.com/MirakelX/mirakel-android/wiki/Tests).
 
 #### Widget
 Everything for the widget. Because Android < 3 has bad support for widgets there are some hacks needed.
