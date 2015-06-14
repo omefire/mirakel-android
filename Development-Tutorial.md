@@ -125,7 +125,6 @@ This stuff you mostly do not need to touch. It is working fine.
 * [*/date-time-picker/*](https://github.com/flavienlaurent/datetimepicker) A modified picker for pick a date and a time simultaneously
 * [*/donationslib/*](https://github.com/dschuermann/android-donations-lib) Donation library supporting Paypal, Flattr and Google Play
 * [*/ilovefs-android/*](https://github.com/azapps/ilovefs-android) An information dialog displayed on the I love FS day
-* [*/progresswheel/*](https://github.com/Todd-Davies/ProgressWheel) The progresswheel shown in the Tasksfragment
 
 
 #### Model
