@@ -57,7 +57,7 @@ Do not use Eclipse. We do not support Eclipse anymore
 
 ## Using Gradle
 
-The simplest way to build Mirakel using Gradle(Version 2.1 is recommend) is:
+The simplest way to build Mirakel using Gradle(Version 2.4 is recommend) is:
 ```sh
 $ gradle build
 ```
