@@ -126,13 +126,12 @@ This stuff you mostly do not need to touch. It is working fine.
 * [*/donationslib/*](https://github.com/dschuermann/android-donations-lib) Donation library supporting Paypal, Flattr and Google Play
 * [*/ilovefs-android/*](https://github.com/azapps/ilovefs-android) An information dialog displayed on the I love FS day
 
+#### New_ui
+
+The main part of Mirakel containing the new UI.
 
 #### Model
 Here you can find our models. They are responsible for communicating with the database and represents our data structures.
-
-### New_ui
-
-The main part of Mirakel containing the new UI.
 
 #### tw_sync
 Everything which has something to do with the taskwarrior sync.
