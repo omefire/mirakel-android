@@ -35,6 +35,18 @@ $ mkdir mirakel-android
 $ cd mirakel-android
 $ repo init -u ssh://[username]@gerrit.azapps.de:29418/mirakel-android
 ```
+
+The above initialisation step might fail with the following error message : 
+error: in `init -u ssh://[username]@gerrit.azapps.de:29418/mirakel-android`: [Errno 2] No such file or directory: '/home/omefire/Projects/mirakel-android/.repo/manifests/.git/HEAD'
+error: manifest missing or unreadable -- please run init
+
+If that's the case for you, try the following :
+```sh
+$ cd mirakel-android
+$ cd ..
+$ repo init -u ssh://[username]@gerrit.azapps.de:29418/mirakel-android
+```
+
 Replace [username] by your user name.
 4. Downloading the source
 ```sh
